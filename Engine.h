@@ -34,7 +34,6 @@ struct Engine {
         if (lastIndex.find(toLower(recIn.last)) != nullptr) { //someone else has the same last name
             vector<int>* namesIndices = lastIndex.find(toLower(recIn.last));
             namesIndices->push_back(theIndex); // update the vector/value of the node
-            int lenOf = lastIndex.find(toLower(recIn.last))->size();
         }else{ //add a new node to lastIndex bst
             vector<int> namesIndices;
             namesIndices.push_back(theIndex);
