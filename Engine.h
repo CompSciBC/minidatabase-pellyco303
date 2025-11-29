@@ -91,6 +91,7 @@ struct Engine {
     vector<const Record*> rangeById(int lo, int hi, int& cmpOut) {
         vector<const Record*> v1;
         idIndex.resetMetrics();
+        // search for IDs within lo--hi range
         idIndex.rangeApply(lo, hi, [&](const int& id, int& ind) {
             Record* ptr = &heap[ind];
             v1.push_back(ptr);
@@ -104,6 +105,7 @@ struct Engine {
         if (str.size() < thePrefix.size()) {
             return false;
         }
+        //the string should match the indicated prefix
         for (int i = 0; i < thePrefix.size(); i++) {
             if (thePrefix[i] != str[i]) {
                 return false;
@@ -118,7 +120,8 @@ struct Engine {
         vector<const Record*> v1;
         string prefixLowerCase = toLower(prefix);
         lastIndex.resetMetrics();
-
+        
+        // find the matches for the given prefix, using the helper function 'matches'
         lastIndex.rangeApply(prefixLowerCase, string(1, prefixLowerCase[0] + 1), [&](const string& k, vector<int>& v) {
             if (matches(prefixLowerCase, k)) {
                 for (int i = 0; i < v.size(); i++) {
