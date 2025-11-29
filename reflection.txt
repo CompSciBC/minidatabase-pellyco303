@@ -1,0 +1,34 @@
+Shana Sheem, CS 300 Fall 2025, assignment 2 (mini dbe)
+
+
+Approach to designing the engine class:
+
+- made diagrams of how the heap and the two BSTs work together, during the operations (insertion, deletion, the others)
+
+- wrote drafts for the methods and continually tested them
+
+- reviewed the early drafts and looked for redundancies to eliminate
+
+
+Challenges:
+
+- C++ lambda syntax is new
+
+- C++ pointer syntax still relatively new
+
+
+Insights gained:
+
+- Introduction to C++ lambdas
+
+- Better understanding of C++ syntax, especially pointers
+
+- Better understanding of BST components
+
+- Better understanding of BST structure
+
+
+
+
+
+
